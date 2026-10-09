@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人 Agent</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Personal Agent</p>
+        <h1>你的个人智能助理</h1>
+        <p class="subtitle">
+          支持聊天引导、待办管理、笔记记录和今日摘要，适合作为个人
+          agent 的最小可运行原型。
+        </p>
+      </section>
+
+      <section class="panel">
+        <div id="messages" class="messages">
+          <article class="message agent">
+            <div class="bubble">
+              你好，我是你的个人 Agent。你可以输入“添加待办：整理周报”或“记住：下周一体检”。
+            </div>
+          </article>
+        </div>
+
+        <form id="chat-form" class="composer">
+          <input
+            id="message-input"
+            type="text"
+            placeholder="输入消息，例如：今日摘要"
+            autocomplete="off"
+          />
+          <button type="submit">发送</button>
+        </form>
+
+        <div class="examples">
+          <button class="example-btn" data-message="添加待办：整理项目计划">
+            添加待办
+          </button>
+          <button class="example-btn" data-message="记住：下周三下午和客户开会">
+            记录笔记
+          </button>
+          <button class="example-btn" data-message="查看待办">查看待办</button>
+          <button class="example-btn" data-message="今日摘要">今日摘要</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
